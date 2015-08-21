@@ -19,8 +19,8 @@ namespace ContactBackup.Models
         public bool IsFacebookUser { get; set; }
         public bool IsActivated { get; set; }
         public String Language { get; set; }
-        public String CreatedDate { get; set; }
-        public String LastChanged { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime LastChanged { get; set; }
         public DateTime LastLoginTime { get; set; }
         public int LoginAttempted { get; set; }
         public String SecurityToken { get; set; }

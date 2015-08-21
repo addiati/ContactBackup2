@@ -21,5 +21,10 @@ namespace ContactBackup.DAL
         public DbSet<EmailInfo> Emails { get; set; }
         public DbSet<AddressInfo> Addresses { get; set; }
         public DbSet<SocialNetworkInfo> SocialNetworks { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }
